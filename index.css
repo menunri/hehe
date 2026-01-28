@@ -27,6 +27,11 @@ body {
       animation: glowPulse 3s infinite ease-in-out;
     }
 
+    #surprise.show {
+      display: block;
+    }
+
+
     h1 {
       font-size: 1.6rem;
       margin-bottom: 12px;

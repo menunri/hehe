@@ -40,3 +40,22 @@ const button = document.getElementById('revealBtn');
         }, 4000);
     }
     }
+
+    const img = [
+    'img/slime.png',
+    'img/slime-1.png'
+    ];
+
+    const imgs = document.getElementById('anim');
+    let index = 0;
+
+    // Preload images
+    img.forEach(src => {
+        const i = new Image();
+        i.src = src;
+    });
+
+    setInterval(() => {
+        imgs.src = img[index];
+        index = (index + 1) % img.length;
+    }, 300); // speed (ms)

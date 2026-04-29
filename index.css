@@ -44,7 +44,7 @@ body {
 
     button {
       background: rgb(2, 0, 28);
-      border: 2px solid #dc2eff;
+      border: none;
       padding: 14px 24px;
       font-size: 1rem;
       color: white;
@@ -115,12 +115,110 @@ body {
     }
     }
 
+    /* Wheel Styles */
+    .wheel-container {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        margin: 20px auto;
+        cursor: pointer;
+    }
 
+    .pointer {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 25px solid #fff;
+        z-index: 10;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .wheel {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.2);
+        transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+        background: conic-gradient(
+            from 0deg,
+            #408ab6 0deg 90deg,    /* Prize 1 Color */
+            #660099 90deg 180deg,  /* Prize 2 Color */
+            #FEE500 180deg 270deg, /* Prize 3 Color */
+            #006A4E 270deg 360deg  /* Prize 4 Color */
+        );
+    }
+
+    /* Segment labels removed - prizes are hidden until reveal */
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #fff, #e0e0e0);
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 5;
+    }
+
+    .spin-btn {
+        background: rgb(2, 0, 28);
+        padding: 14px 40px;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        transition: 0.3s ease-in-out;
+        font-family: "Pixelify Sans", sans-serif;
+    }
+
+    .spin-btn:active {
+        transform: scale(0.97);
+    }
+
+    .spin-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .result {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .result.hidden {
+        display: none;
+    }
+
+    .result .amount {
+        font-size: 4rem;
+        font-weight: bold;
+    }
 
     @media (max-width: 480px) {
     .card {
         max-width: 200px;
     }
 
-    
+    .wheel-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .segment span {
+        font-size: 0.9rem;
+    }
 }

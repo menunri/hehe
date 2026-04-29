@@ -8,21 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
- 
+  
 </head>
 <body>
   <div class="card">
-    <p id="message"></p>
+    <p id="message">Tap the wheel to spin!</p>
 
-    <button id="revealBtn">Tap me</button>
+    <div class="wheel-container">
+      <div class="pointer"></div>
+      <div class="wheel" id="wheel">
+        <div class="center"></div>
+      </div>
+    </div>
 
-    <div id="surprise" class="hidden">
-      
-      <div class="amount">HAPPY BIRTHDAY! </div>
-        <div class="slime-image">
-          <img id="anim" src="img/slime.png" alt="slime"/>
-        </div>
-    
+    <button id="spinBtn" class="spin-btn"></button>
+
+    <div id="result" class="result hidden">
+      <div class="amount"></div>
     </div>
   </div>
 

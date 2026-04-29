@@ -1,9 +1,9 @@
 // Prize segments with weighted probabilities
 const prizes = [
-    { amount: '₱1,000', color: '#adeac3', weight: 55 },
+    { amount: '₱1,000', color: '#adeac3', weight: 80 },
     { amount: '₱500', color: '#3b82f6', weight: 20 },
-    { amount: '₱200', color: '#eab308', weight: 20 },
-    { amount: '₱100', color: '#ef4444', weight: 5 }
+    { amount: '₱200', color: '#eab308', weight: 0 },
+    { amount: '₱100', color: '#ef4444', weight: 0 }
 ];
 
 // Calculate cumulative weights for selection

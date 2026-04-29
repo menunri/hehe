@@ -25,6 +25,8 @@ body {
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       filter: drop-shadow(0 0 2px rgba(255, 235, 209, 0.2));
       animation: glowPulse 3s infinite ease-in-out;
+      box-sizing: border-box; 
+      margin: 0 auto;
     }
 
     #surprise.show {
@@ -208,14 +210,19 @@ body {
         font-weight: bold;
     }
 
-    @media (max-width: 480px) {
+
+
+@media (max-width: 480px) {
     .card {
-        max-width: 200px;
+        max-width: 320px;
     }
 
     .wheel-container {
         width: 220px;
         height: 220px;
+        /* This strictly forces the wheel to center itself horizontally */
+        margin: 20px auto !important; 
+        display: block;
     }
 
     .segment span {

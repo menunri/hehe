@@ -1,33 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surprise</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  
-</head>
-<body>
-  <div class="card">
-    <p id="message">Tap the wheel to spin!</p>
-
-    <div class="wheel-container">
-      <div class="pointer"></div>
-      <div class="wheel" id="wheel">
-        <div class="center"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">KL</a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-    <button id="spinBtn" class="spin-btn"></button>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Karl Edrich L. Lavarias </h1>
+        <p class="hero-subtitle">Full Stack Developer</p>
+        <p class="hero-tagline">
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor">|</span>
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            <i data-lucide="github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <div id="result" class="result hidden">
-      <div class="amount"></div>
-    </div>
-  </div>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-avatar">
+            <span>JD</span>
+          </div>
+          <div class="about-text">
+            <p>
+              Passionate developer with a love for creating elegant, efficient
+              solutions. I enjoy building web applications that make a
+              difference and constantly learning new technologies to stay at the
+              forefront of web development.
+            </p>
+            <div class="skills">
+              <span class="skill-badge"
+                ><i data-lucide="code-2"></i> JavaScript</span
+              >
+              <span class="skill-badge"><i data-lucide="atom"></i> React</span>
+              <span class="skill-badge"
+                ><i data-lucide="server"></i> Node.js</span
+              >
+              <span class="skill-badge"
+                ><i data-lucide="database"></i> MongoDB</span
+              >
+              <span class="skill-badge"
+                ><i data-lucide="globe"></i> HTML/CSS</span
+              >
+              <span class="skill-badge"
+                ><i data-lucide="git-branch"></i> Git</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="index.js"></script>
-</body>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i data-lucide="shopping-cart"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">BIBLIOTICA: E-COMMERCE ONLINE BOOKSTORE SYSTEM</h3>
+              <p class="project-description">
+                 A web-based platform aimed at improving the book-buying experience through modern 
+                 digital tools and streamlined processes.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"
+                  ><i data-lucide="github"></i> Code</a
+                >
+                <a href="#" class="project-link"
+                  ><i data-lucide="external-link"></i> Demo</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i data-lucide="message-square"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title"> TruSight: Phishing Detection Tool Application</h3>
+              <p class="project-description">
+                A mobile application that empowers users to detect, prevent, 
+                and respond to online fraud and phishing attempts, ensuring safer 
+                digital communication.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Capacitor.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" rel="noopener noreferrer"
+                  ><i data-lucide="github"></i> Code</a
+                >
+                <a href="#" class="project-link" rel="noopener noreferrer"
+                  ><i data-lucide="external-link"></i> Demo</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i data-lucide="layout-dashboard"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Web-Based Application for Hiyori Suites, Hampton Residences, 
+                and Windsor Residences with 360-degree Virtual Tours and Narrow AI Chatbot</h3>
+              <p class="project-description">
+                A web-based application for Hiyori suites, Hampton Residences, and Windsor Residences with 360-degree virtual tours 
+                and Narrow AI chatbot
+              </p>
+              <div class="project-tags">  
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Electron.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" rel="noopener noreferrer"
+                  ><i data-lucide="github"></i> Code</a
+                >
+                <a href="#" class="project-link" rel="noopener noreferrer"
+                  ><i data-lucide="external-link"></i> Demo</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-text">
+          Feel free to reach out if you'd like to collaborate or just say hello!
+        </p>
+        <a href="mailto:john.doe@email.com" class="btn btn-primary btn-large">
+          <i data-lucide="mail"></i>
+          karledrichlavarias@gmail.com
+        </a>
+        <div class="social-links">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="GitHub"
+          >
+            <i data-lucide="github"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="LinkedIn"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Twitter"
+          >
+            <i data-lucide="twitter"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; Karl Lavarias. For every problem that comes my way, I find a solution to pave the way.</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
 </html>
